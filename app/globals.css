@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 33% 98%;
+    --foreground: 0 0% 29%;
+
+    --primary: 0 100% 71%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 84 65% 72%;
+    --secondary-foreground: 0 0% 29%;
+
+    --accent: 42 100% 70%;
+    --accent-foreground: 0 0% 29%;
+
+    --muted: 60 33% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 29%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Nunito", sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
